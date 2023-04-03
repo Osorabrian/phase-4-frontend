@@ -26,7 +26,10 @@ export default function SignUp() {
 	useEffect(() => {
 		fetch('/nurses', {
 			method: 'GET',
-			credentials: 'include'
+			credentials: 'include',
+			headers: {
+				'Accept': 'application/json'
+			}
 		})
 			.then((response) => response.json())
 			.then((data) => setNurses(data));
