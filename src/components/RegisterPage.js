@@ -32,7 +32,7 @@ export default function SignUp() {
 			}
 		})
 			.then((response) => response.json())
-			.then((data) => setNurses(data));
+			.then((data) => console.log(data));
 	}, []);
 
 	const allNurses = nurses.map((nurse) => {
